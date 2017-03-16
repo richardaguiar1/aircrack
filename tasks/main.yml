@@ -1,0 +1,15 @@
+---
+- name: Aircrack
+  hosts: 127.0.0.1
+  remote_user: root
+  become: yes
+  tasks:
+  
+  - name: Instalar build-essential
+    apt: name=build-essential  state=latest
+    
+  - name: Instalar libssl-dev
+    apt: name=libssl-dev  state=latest
+  
+  - name: Instalar aircrack-ng
+    apt: name=aircrack-ng  state=latest
